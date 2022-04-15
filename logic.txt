@@ -1,0 +1,13 @@
+first click:
+
+get all buttons to have the following classes:
+- clicked or unclicked
+- displayed or hidden
+- contains mine (yes/no)
+- num of mines touching 
+
+upon first click, if num of mines is 0 then check 8 surrounding buttons for their num of mines touching
+
+repeat process for all neighbouring buttons that do not touch any mines (AND ARE NOT YET DISPLAYED) until for all buttons displayed, num of mines touching is at least 1 (ie complete border of numbers)
+
+from this point, gameplay is essentially already coded

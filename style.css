@@ -1,0 +1,15 @@
+.wow {
+  width: 100px;
+}
+
+button {
+  background-color: #949494; 
+  width: 30px;
+  height: 30px;
+  
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(10,30px);
+}
