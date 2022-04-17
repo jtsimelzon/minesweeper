@@ -35,6 +35,9 @@ for (var i = 0; i < 100; i++) { // makes a board with buttons
       if (touchedMines === 1) {
         btn.style.backgroundColor = 'blue'
       }
+      if (touchedMines === 2) {
+        btn.style.backgroundColor = 'red'
+      }
       btn.style.backgroundColor = '#D2B48C'
     }
   }
