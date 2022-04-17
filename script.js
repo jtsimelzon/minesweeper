@@ -33,6 +33,9 @@ for (var i = 0; i < 100; i++) { // makes a board with buttons
       var touchedMines = minesTouching(xPos, yPos)
       btn.innerHTML = touchedMines;
       btn.style.backgroundColor = '#D2B48C'
+      if (touchedMines === 0) {
+        btn.innerHTML = "";
+      }
       if (touchedMines === 1) {
         event.target.style.color = 'blue'
       }
