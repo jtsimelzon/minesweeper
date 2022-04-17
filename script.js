@@ -34,10 +34,16 @@ for (var i = 0; i < 100; i++) { // makes a board with buttons
       btn.innerHTML = touchedMines;
       btn.style.backgroundColor = '#D2B48C'
       if (touchedMines === 1) {
-        event.target.style.color = 'salmon'
+        event.target.style.color = 'blue'
       }
       if (touchedMines === 2) {
-        btn.target.style.color = "red"
+        event.target.style.color = 'green'
+      }
+      if (touchedMines === 3) {
+        event.target.style.color = 'red'
+      }
+      if (touchedMines === 4) {
+        event.target.style.color = 'purple'
       }
     }
   }
