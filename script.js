@@ -22,7 +22,6 @@ for (var i = 0; i < 100; i++) { // makes a board with buttons
   btn.id = `button${xPos + "." + yPos}`
   btn.innerHTML = "";
   document.getElementById("board").appendChild(btn);
-
   
   btn.onclick = function() {
     var clickedPos = `${xPos + "." + yPos}` 
@@ -36,7 +35,6 @@ for (var i = 0; i < 100; i++) { // makes a board with buttons
     }
   }
 }
-
 
 
 function minesTouching (xPos, yPos) {
