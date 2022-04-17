@@ -1,4 +1,5 @@
 var mineList = []
+var board = []
 
 function chooseMines() {
   var mineXPos = Math.floor(Math.random() * 10) + 1;
@@ -16,6 +17,8 @@ console.log(mineList)
 
 
 for (var i = 0; i < 100; i++) { // makes a board with buttons 
+
+
   let btn = document.createElement("button");
   let yPos = Math.floor((i / 10) + 1)
   let xPos = (i % 10) + 1
@@ -23,14 +26,18 @@ for (var i = 0; i < 100; i++) { // makes a board with buttons
   btn.innerHTML = "";
   document.getElementById("board").appendChild(btn);
   
+  var touchedMines = minesTouching(xPos, yPos)
+  board.push(touchedMines)
+
   btn.onclick = function(event) {
     var clickedPos = `${xPos + "." + yPos}` 
     var mineHit = mineList.includes(clickedPos);
 
     if (mineHit) {
       btn.style.backgroundColor = 'red'
-    } else {
-      var touchedMines = minesTouching(xPos, yPos)
+    } 
+    else {
+      
       btn.innerHTML = touchedMines;
       btn.style.backgroundColor = '#D2B48C'
       if (touchedMines === 0) {
@@ -52,6 +59,8 @@ for (var i = 0; i < 100; i++) { // makes a board with buttons
   }
 }
 
+
+console.log(touchedMines)
 
 function minesTouching (xPos, yPos) {
   let numMinesTouching = 0
