@@ -17,8 +17,6 @@ console.log(mineList)
 
 
 for (var i = 0; i < 100; i++) { // makes a board with buttons 
-
-
   let btn = document.createElement("button");
   let yPos = Math.floor((i / 10) + 1)
   let xPos = (i % 10) + 1
@@ -37,7 +35,7 @@ for (var i = 0; i < 100; i++) { // makes a board with buttons
       btn.style.backgroundColor = 'red'
     } 
     else {
-      
+      var touchedMines = minesTouching(xPos, yPos)
       btn.innerHTML = touchedMines;
       btn.style.backgroundColor = '#D2B48C'
       if (touchedMines === 0) {
