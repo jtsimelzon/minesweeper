@@ -23,7 +23,7 @@ for (var i = 0; i < 100; i++) { // makes a board with buttons
   btn.innerHTML = "";
   document.getElementById("board").appendChild(btn);
   
-  btn.onclick = function() {
+  btn.onclick = function(event) {
     var clickedPos = `${xPos + "." + yPos}` 
     var mineHit = mineList.includes(clickedPos);
 
@@ -34,10 +34,10 @@ for (var i = 0; i < 100; i++) { // makes a board with buttons
       btn.innerHTML = touchedMines;
       btn.style.backgroundColor = '#D2B48C'
       if (touchedMines === 1) {
-        btn.style.backgroundColor = "blue"
+        event.target.style.color = 'salmon'
       }
       if (touchedMines === 2) {
-        btn.style.backgroundColor = "red"
+        btn.target.style.color = "red"
       }
     }
   }
