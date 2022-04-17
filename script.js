@@ -22,23 +22,26 @@ for (var i = 0; i < 100; i++) { // makes a board with buttons
   btn.id = `button${xPos + "." + yPos}`
   btn.innerHTML = "";
   document.getElementById("board").appendChild(btn);
+
   
   btn.onclick = function() {
     var clickedPos = `${xPos + "." + yPos}` 
     var mineHit = mineList.includes(clickedPos);
-    if (mineHit === true) {
+
+    if (mineHit) {
       btn.style.backgroundColor = 'red'
     } else {
-      minesTouching()
-      btn.innerHTML = numMinesTouching;
+      btn.innerHTML = minesTouching(xPos, yPos);
       btn.style.backgroundColor = 'blue'
     }
   }
 }
 
-let numMinesTouching = 0
+
 
 function minesTouching (xPos, yPos) {
+  let numMinesTouching = 0
+  
   var mineTouch1 = mineList.includes(`${(xPos - 1) + "." + (yPos - 1)}`); // top left corner
   if (mineTouch1) {
     numMinesTouching+=1
