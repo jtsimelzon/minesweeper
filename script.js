@@ -33,7 +33,7 @@ for (var i = 0; i < 100; i++) { // makes a board with buttons
       var touchedMines = minesTouching(xPos, yPos)
       btn.innerHTML = touchedMines;
       if (touchedMines === 1) {
-      btn.style.fontColor = 'blue'
+        btn.style.backgroundColor = 'blue'
       }
       btn.style.backgroundColor = '#D2B48C'
     }
