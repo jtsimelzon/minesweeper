@@ -8,9 +8,14 @@ function chooseMines() {
   return mineID
 }
 
-for (var i = 0; i < 15; i++) {
+for (var i = 0; i < 20; i++) {
   var minePosReturn = chooseMines()
-  mineList.push(minePosReturn)
+  if (mineList.includes(minePosReturn) === false) {
+    mineList.push(minePosReturn)
+  } else {
+    i-=1
+  }
+  
 }
 
 console.log(mineList)
