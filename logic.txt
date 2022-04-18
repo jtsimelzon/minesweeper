@@ -1,0 +1,8 @@
+steps for clicking on 0 square:
+
+build function which can identify all touching zero squares
+ideally would return both number of zero squares and id's of the zero squares
+
+repeat function for all ids of the zero squares - try to do this recursively
+
+continue until no zero squares left to run function 
