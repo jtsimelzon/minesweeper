@@ -33,8 +33,9 @@ for (var i = 0; i < 100; i++) { // makes a board with buttons
 
   btn.onclick = function(event) {
     var clickedPos = `${xPos + "." + yPos}` 
+    buttonIndexTest = convertIndex()
+    alert(buttonIndexTest)
     var mineHit = mineList.includes(clickedPos);
-
     if (mineHit) {
       btn.style.backgroundColor = 'red'
     } 
@@ -65,6 +66,15 @@ for (var i = 0; i < 100; i++) { // makes a board with buttons
 }
 
 // board now working!
+
+function convertIndex (xPos, yPos) {
+  if (yPos > 1) {
+    var buttonIndex = (yPos - 1) * 10 + xPos
+  } else {
+    var buttonIndex = xPos
+  }
+  return buttonIndex
+}
 
 function minesTouching (xPos, yPos) {
   let numMinesTouching = 0
