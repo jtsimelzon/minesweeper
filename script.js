@@ -65,7 +65,6 @@ for (var i = 0; i < 100; i++) { // makes a board with buttons
   }
 }
 
-// board now working!
 
 function convertIndex (xPos, yPos) {
   if (yPos > 1) {
