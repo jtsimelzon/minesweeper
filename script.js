@@ -57,6 +57,9 @@ for (var i = 0; i < 100; i++) { // makes a board with buttons
       if (touchedMines === 4) {
         event.target.style.color = 'purple'
       }
+      if (touchedMines === 5) {
+        event.target.style.color = 'orange'
+      }
     }
   }
 }
