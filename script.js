@@ -33,7 +33,7 @@ for (var i = 0; i < 100; i++) { // makes a board with buttons
 
   btn.onclick = function(event) {
     var clickedPos = `${xPos + "." + yPos}` 
-    buttonIndexTest = convertIndex()
+    buttonIndexTest = convertIndex(xPos, yPos)
     alert(buttonIndexTest)
     var mineHit = mineList.includes(clickedPos);
     if (mineHit) {
