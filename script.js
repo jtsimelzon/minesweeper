@@ -13,9 +13,8 @@ for (var i = 0; i < 20; i++) {
   if (mineList.includes(minePosReturn) === false) {
     mineList.push(minePosReturn)
   } else {
-    i-=1
+    i--
   }
-  
 }
 
 console.log(mineList)
