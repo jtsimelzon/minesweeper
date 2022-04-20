@@ -35,6 +35,7 @@ for (var xPos = 0; xPos < 10; xPos++) {
 
     btn.onclick = function(event) {
       var clickedPos = `${xPos + "." + yPos}` 
+      console.log(clickedPos)
       var mineHit = mineList.includes(clickedPos);
       if (mineHit) {
         btn.style.backgroundColor = 'red'
