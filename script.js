@@ -34,8 +34,6 @@ for (var xPos = 0; xPos < 10; xPos++) {
     column.push(touchedMines)
 
     btn.onclick = function(event) {
-      alert(board[1][3])
-
       var clickedPos = `${xPos + "." + yPos}` 
       var buttonIndexTest = convertIndex(xPos, yPos)
       var mineHit = mineList.includes(clickedPos);
