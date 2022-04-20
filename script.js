@@ -32,9 +32,6 @@ for (let xPos = 0; xPos < 10; xPos++) {
     column.push(touchedMines)
 
     btn.onclick = function(event) {
-
-      zerosTouching()
-
       var clickedPos = `${xPos + "." + yPos}` 
       console.log(clickedPos)
       var mineHit = mineList.includes(clickedPos);
@@ -106,14 +103,5 @@ function minesTouching (xPos, yPos) {
     numMinesTouching+=1
   }
   return numMinesTouching
-}
-
-function zerosTouching(xPos, yPos) {
-  let numZeroSquares = 0
-
-  if (board[xPos - 1][yPos - 1] === 0) {
-    alert("yay")
-  }
-
 }
 
