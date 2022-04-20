@@ -23,6 +23,9 @@ for (var xPos = 0; xPos < 10; xPos++) {
   var column = []
   for (var yPos = 0; yPos < 10; yPos++)  {
 
+    var xSave = xPos;
+    var ySave = yPos;
+
     let btn = document.createElement("button");
     // let yPos = Math.floor((i / 10) + 1)
     // let xPos = (i % 10) + 1
@@ -34,7 +37,9 @@ for (var xPos = 0; xPos < 10; xPos++) {
     column.push(touchedMines)
 
     btn.onclick = function(event) {
-      alert(event);
+      var xPos = xSave;
+      var yPos = ySave;
+
       var clickedPos = `${xPos + "." + yPos}` 
       console.log(clickedPos)
       var mineHit = mineList.includes(clickedPos);
