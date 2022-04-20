@@ -35,12 +35,12 @@ for (var xPos = 0; xPos < 10; xPos++) {
 
     btn.onclick = function(event) {
       var clickedPos = `${xPos + "." + yPos}` 
-      var buttonIndexTest = convertIndex(xPos, yPos)
       var mineHit = mineList.includes(clickedPos);
       if (mineHit) {
         btn.style.backgroundColor = 'red'
       } else {
         var touchedMines = minesTouching(xPos, yPos)
+        console.log(touchedMines)
         btn.innerHTML = touchedMines;
         btn.style.backgroundColor = '#D2B48C'
         if (touchedMines === 0) {
@@ -67,15 +67,6 @@ for (var xPos = 0; xPos < 10; xPos++) {
   board.push(column)
 }
 
-
-function convertIndex (xPos, yPos) {
-  if (yPos > 1) {
-    var buttonIndex = (yPos - 1) * 10 + xPos
-  } else {
-    var buttonIndex = xPos
-  }
-  return buttonIndex
-}
 
 function minesTouching (xPos, yPos) {
   let numMinesTouching = 0
