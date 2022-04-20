@@ -24,8 +24,6 @@ for (let xPos = 0; xPos < 10; xPos++) {
   for (let yPos = 0; yPos < 10; yPos++)  {
 
     let btn = document.createElement("button");
-    // let yPos = Math.floor((i / 10) + 1)
-    // let xPos = (i % 10) + 1
     btn.id = `button${xPos + "." + yPos}`
     btn.innerHTML = "";
     document.getElementById("board").appendChild(btn);
@@ -106,4 +104,13 @@ function minesTouching (xPos, yPos) {
     numMinesTouching+=1
   }
   return numMinesTouching
+}
+
+function zerosTouching(xPos, yPos) {
+  let numZeroSquares = 0
+
+  if (board[xPos - 1][yPos - 1] === 0) {
+    alert("yay")
+  }
+
 }
