@@ -19,19 +19,24 @@ for (var i = 0; i < 20; i++) {
 
 console.log(mineList)
 
+for (var xPos = 0; xPos < 10; xPos++) {
 for (let xPos = 0; xPos < 10; xPos++) {
   var column = []
+  for (var yPos = 0; yPos < 10; yPos++)  {
+
+    var xSave = xPos;
+    var ySave = yPos;
   for (let yPos = 0; yPos < 10; yPos++)  {
 
     let btn = document.createElement("button");
-    btn.id = `button${xPos + "." + yPos}`
-    btn.innerHTML = "";
-    document.getElementById("board").appendChild(btn);
-    
-    var touchedMines = minesTouching(xPos, yPos)
+    // let yPos = Math.floor((i / 10) + 1)
+@ -37,79 +34,77 @@
     column.push(touchedMines)
 
     btn.onclick = function(event) {
+      var xPos = xSave;
+      var yPos = ySave;
+
       var clickedPos = `${xPos + "." + yPos}` 
       console.log(clickedPos)
       var mineHit = mineList.includes(clickedPos);
@@ -104,4 +109,3 @@ function minesTouching (xPos, yPos) {
   }
   return numMinesTouching
 }
-
