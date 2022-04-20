@@ -31,6 +31,8 @@ for (var i = 0; i < 100; i++) { // makes a board with buttons
   board.push(touchedMines)
 
   btn.onclick = function(event) {
+    alert(board)
+
     var clickedPos = `${xPos + "." + yPos}` 
     var buttonIndexTest = convertIndex(xPos, yPos)
     var mineHit = mineList.includes(clickedPos);
