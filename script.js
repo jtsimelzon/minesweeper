@@ -19,50 +19,54 @@ for (var i = 0; i < 20; i++) {
 
 console.log(mineList)
 
-for (var i = 0; i < 100; i++) { // makes a board with buttons 
-  let btn = document.createElement("button");
-  let yPos = Math.floor((i / 10) + 1)
-  let xPos = (i % 10) + 1
-  btn.id = `button${xPos + "." + yPos}`
-  btn.innerHTML = "";
-  document.getElementById("board").appendChild(btn);
-  
-  var touchedMines = minesTouching(xPos, yPos)
-  board.push(touchedMines)
+for (var xPos = 0; xPos < 10; xPos++) {
+  var column = []
+  for (var yPos = 0; yPos < 10; yPos++)  {
 
-  btn.onclick = function(event) {
-    alert(board)
+    let btn = document.createElement("button");
+    // let yPos = Math.floor((i / 10) + 1)
+    // let xPos = (i % 10) + 1
+    btn.id = `button${xPos + "." + yPos}`
+    btn.innerHTML = "";
+    document.getElementById("board").appendChild(btn);
+    
+    var touchedMines = minesTouching(xPos, yPos)
+    column.push(touchedMines)
 
-    var clickedPos = `${xPos + "." + yPos}` 
-    var buttonIndexTest = convertIndex(xPos, yPos)
-    var mineHit = mineList.includes(clickedPos);
-    if (mineHit) {
-      btn.style.backgroundColor = 'red'
-    } 
-    else {
-      var touchedMines = minesTouching(xPos, yPos)
-      btn.innerHTML = touchedMines;
-      btn.style.backgroundColor = '#D2B48C'
-      if (touchedMines === 0) {
-        btn.innerHTML = "";
-      }
-      if (touchedMines === 1) {
-        event.target.style.color = 'blue'
-      }
-      if (touchedMines === 2) {
-        event.target.style.color = 'green'
-      }
-      if (touchedMines === 3) {
-        event.target.style.color = 'red'
-      }
-      if (touchedMines === 4) {
-        event.target.style.color = 'purple'
-      }
-      if (touchedMines === 5) {
-        event.target.style.color = 'orange'
+    btn.onclick = function(event) {
+      alert(board)
+
+      var clickedPos = `${xPos + "." + yPos}` 
+      var buttonIndexTest = convertIndex(xPos, yPos)
+      var mineHit = mineList.includes(clickedPos);
+      if (mineHit) {
+        btn.style.backgroundColor = 'red'
+      } else {
+        var touchedMines = minesTouching(xPos, yPos)
+        btn.innerHTML = touchedMines;
+        btn.style.backgroundColor = '#D2B48C'
+        if (touchedMines === 0) {
+          btn.innerHTML = "";
+        }
+        if (touchedMines === 1) {
+          event.target.style.color = 'blue'
+        }
+        if (touchedMines === 2) {
+          event.target.style.color = 'green'
+        }
+        if (touchedMines === 3) {
+          event.target.style.color = 'red'
+        }
+        if (touchedMines === 4) {
+          event.target.style.color = 'purple'
+        }
+        if (touchedMines === 5) {
+          event.target.style.color = 'orange'
+        }
       }
     }
   }
+  board.push(column)
 }
 
 
