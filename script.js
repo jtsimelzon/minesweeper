@@ -2,8 +2,8 @@ var mineList = []
 var board = []
 
 function chooseMines() {
-  var mineXPos = Math.floor(Math.random() * 10) + 1;
-  var mineYPos = Math.floor(Math.random() * 10) + 1;
+  var mineXPos = Math.floor(Math.random() * 10);
+  var mineYPos = Math.floor(Math.random() * 10);
   var mineID = `${mineXPos}${"." + mineYPos}`
   return mineID
 }
