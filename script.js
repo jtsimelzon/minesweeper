@@ -33,6 +33,8 @@ for (let xPos = 0; xPos < 10; xPos++) {
 
     btn.onclick = function(event) {
 
+      zerosTouching()
+
       var clickedPos = `${xPos + "." + yPos}` 
       console.log(clickedPos)
       var mineHit = mineList.includes(clickedPos);
@@ -114,3 +116,4 @@ function zerosTouching(xPos, yPos) {
   }
 
 }
+
