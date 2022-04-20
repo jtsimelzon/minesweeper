@@ -109,3 +109,5 @@ function minesTouching (xPos, yPos) {
   }
   return numMinesTouching
 }
+
+// hola
