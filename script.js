@@ -37,7 +37,6 @@ for (let xPos = 0; xPos < 10; xPos++) {
     column.push(touchedMines)
 
     btn.onclick = function(event) {
-      alert("joseph is silly")
 
       var clickedPos = `${xPos + "." + yPos}` 
       console.log(clickedPos)
