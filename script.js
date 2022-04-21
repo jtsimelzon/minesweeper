@@ -18,6 +18,8 @@ for (var i = 0; i < 20; i++) {
   }
 }
 
+
+
 console.log(mineList)
 
 for (let xPos = 0; xPos < 10; xPos++) {
@@ -35,6 +37,7 @@ for (let xPos = 0; xPos < 10; xPos++) {
     column.push(touchedMines)
 
     btn.onclick = function(event) {
+      alert("joseph is silly")
 
       var clickedPos = `${xPos + "." + yPos}` 
       console.log(clickedPos)
