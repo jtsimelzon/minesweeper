@@ -115,4 +115,4 @@ function zerosTouching(xPos, yPos) {
 
    alert(board[xPos - 1][yPos - 1])
    alert(board[xPos][yPos - 1])
-}
+} // indexing seems to be working
