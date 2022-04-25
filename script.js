@@ -111,8 +111,8 @@ function minesTouching (xPos, yPos) {
 }
 
 
-function zerosTouching(xPos, yPos, clickedPos) {
-  console.log(clickedPos)
+function zerosTouching(xPos, yPos) {
+
   var zeroIDs = []
   let numZeroSquares = 0
 
