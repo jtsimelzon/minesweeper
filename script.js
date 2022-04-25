@@ -149,7 +149,6 @@ function zerosTouching(xPos, yPos) {
     zeroIDs.push(`${(xPos + 1) + "." + (yPos + 1)}`)
   }
   alert(zeroIDs)
-
 }
 // indexing seems to be working
 // it works !!
