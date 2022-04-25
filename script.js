@@ -140,3 +140,4 @@ function zerosTouching(xPos, yPos) {
   alert(numZeroSquares)
 }
 // indexing seems to be working
+// waawaaaweewa
