@@ -20,9 +20,9 @@ for (var i = 0; i < 20; i++) {
 
 console.log(mineList)
 
-for (let yPos = 0; xPos < 10; xPos++) {
+for (let yPos = 0; yPos < 10; yPos++) {
   var column = []
-  for (let xPos = 0; yPos < 10; yPos++)  {
+  for (let xPos = 0; xPos < 10; xPos++)  {
 
     let btn = document.createElement("button");
     btn.id = `button${xPos + "." + yPos}`
