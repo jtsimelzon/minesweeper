@@ -38,6 +38,7 @@ for (let xPos = 0; xPos < 10; xPos++) {
 
       var clickedPos = `${xPos + "." + yPos}` 
       console.log(clickedPos)
+
       var mineHit = mineList.includes(clickedPos);
       if (mineHit) {
         btn.style.backgroundColor = 'red'
@@ -148,6 +149,7 @@ function zerosTouching(xPos, yPos) {
     zeroIDs.push(`${(xPos + 1) + "." + (yPos + 1)}`)
   }
   alert(zeroIDs)
+  alert(xPos + "." + yPos)
 }
 // indexing seems to be working
 // it works !!
