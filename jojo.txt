@@ -1,0 +1,11 @@
+this function will accept the position of the current cell to check
+
+the first thing it will do:
+
+if that position is not a 0 square, then reveal that position and return the function, breaking the recursive loop
+
+otherwise continue and reveal that square. 
+
+find positions of each of the surrounding cells
+
+go through those with a [for (let x of array)] loop, calling this function with each of these positions
