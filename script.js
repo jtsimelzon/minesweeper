@@ -141,7 +141,7 @@ function zerosTouching(xPos, yPos) {
   if (board[xPos + 1][yPos + 1] === 0) {
     numZeroSquares+=1
   }
-  alert(board[xPos][yPos], numZeroSquares)
+  alert(board[xPos][yPos])
 }
 // indexing seems to be working
 // it works !!
