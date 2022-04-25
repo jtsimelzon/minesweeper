@@ -111,10 +111,14 @@ function minesTouching (xPos, yPos) {
 
 
 function zerosTouching(xPos, yPos) {
+
+  var zeroIDs = []
+
   let numZeroSquares = 0
 
   if (board[xPos - 1][yPos - 1] === 0) { 
      numZeroSquares+=1
+     zeroIDs.push(board[xPos-1][yPos - 1])
    }
   if (board[xPos][yPos - 1] === 0) {
      numZeroSquares+=1
@@ -137,7 +141,7 @@ function zerosTouching(xPos, yPos) {
   if (board[xPos + 1][yPos + 1] === 0) {
     numZeroSquares+=1
   }
-  alert(numZeroSquares)
+  alert(board[xPos][yPos], numZeroSquares)
 }
 // indexing seems to be working
 // it works !!
