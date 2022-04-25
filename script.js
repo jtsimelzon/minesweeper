@@ -113,35 +113,41 @@ function minesTouching (xPos, yPos) {
 function zerosTouching(xPos, yPos) {
 
   var zeroIDs = []
-
   let numZeroSquares = 0
 
   if (board[xPos - 1][yPos - 1] === 0) { 
      numZeroSquares+=1
-     zeroIDs.push(board[xPos-1][yPos - 1])
+     zeroIDs.push(`${(xPos - 1) + "." + (yPos - 1)}`)
    }
   if (board[xPos][yPos - 1] === 0) {
      numZeroSquares+=1
+     zeroIDs.push(`${(xPos) + "." + (yPos - 1)}`)
    }
   if (board[xPos + 1][yPos - 1] === 0) {
     numZeroSquares+=1
+    zeroIDs.push(`${(xPos + 1) + "." + (yPos - 1)}`)
   }
   if (board[xPos - 1][yPos] === 0) {
     numZeroSquares+=1
+    zeroIDs.push(`${(xPos - 1) + "." + (yPos)}`)
   }
   if (board[xPos + 1][yPos] === 0) {
     numZeroSquares+=1
+    zeroIDs.push(`${(xPos + 1) + "." + (yPos)}`)
   }
   if (board[xPos - 1][yPos + 1] === 0) {
     numZeroSquares+=1
+    zeroIDs.push(`${(xPos - 1) + "." + (yPos + 1)}`)
   }
   if (board[xPos][yPos + 1] === 0) {
     numZeroSquares+=1
+    zeroIDs.push(`${(xPos) + "." + (yPos + 1)}`)
   }
   if (board[xPos + 1][yPos + 1] === 0) {
     numZeroSquares+=1
+    zeroIDs.push(`${(xPos + 1) + "." + (yPos + 1)}`)
   }
-  alert(board[xPos][yPos])
+  alert(zeroIDs)
 }
 // indexing seems to be working
 // it works !!
