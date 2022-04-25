@@ -151,3 +151,4 @@ function zerosTouching(xPos, yPos) {
 }
 // indexing seems to be working
 // it works !!
+// hmmm
