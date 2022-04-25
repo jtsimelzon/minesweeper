@@ -111,8 +111,8 @@ function minesTouching (xPos, yPos) {
 }
 
 
-function zerosTouching(xPos, yPos) {
-
+function zerosTouching(xPos, yPos, clickedPos) {
+  console.log(clickedPos)
   var zeroIDs = []
   let numZeroSquares = 0
 
@@ -149,7 +149,7 @@ function zerosTouching(xPos, yPos) {
     zeroIDs.push(`${(xPos + 1) + "." + (yPos + 1)}`)
   }
   alert(zeroIDs)
-  alert(btn.id)
+
 }
 // indexing seems to be working
 // it works !!
