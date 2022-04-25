@@ -38,7 +38,6 @@ for (let xPos = 0; xPos < 10; xPos++) {
 
       var clickedPos = `${xPos + "." + yPos}` 
       console.log(clickedPos)
-
       var mineHit = mineList.includes(clickedPos);
       if (mineHit) {
         btn.style.backgroundColor = 'red'
@@ -112,44 +111,32 @@ function minesTouching (xPos, yPos) {
 
 
 function zerosTouching(xPos, yPos) {
-
-  var zeroIDs = []
   let numZeroSquares = 0
 
   if (board[xPos - 1][yPos - 1] === 0) { 
      numZeroSquares+=1
-     zeroIDs.push(`${(xPos - 1) + "." + (yPos - 1)}`)
    }
   if (board[xPos][yPos - 1] === 0) {
      numZeroSquares+=1
-     zeroIDs.push(`${(xPos) + "." + (yPos - 1)}`)
    }
   if (board[xPos + 1][yPos - 1] === 0) {
     numZeroSquares+=1
-    zeroIDs.push(`${(xPos + 1) + "." + (yPos - 1)}`)
   }
   if (board[xPos - 1][yPos] === 0) {
     numZeroSquares+=1
-    zeroIDs.push(`${(xPos - 1) + "." + (yPos)}`)
   }
   if (board[xPos + 1][yPos] === 0) {
     numZeroSquares+=1
-    zeroIDs.push(`${(xPos + 1) + "." + (yPos)}`)
   }
   if (board[xPos - 1][yPos + 1] === 0) {
     numZeroSquares+=1
-    zeroIDs.push(`${(xPos - 1) + "." + (yPos + 1)}`)
   }
   if (board[xPos][yPos + 1] === 0) {
     numZeroSquares+=1
-    zeroIDs.push(`${(xPos) + "." + (yPos + 1)}`)
   }
   if (board[xPos + 1][yPos + 1] === 0) {
     numZeroSquares+=1
-    zeroIDs.push(`${(xPos + 1) + "." + (yPos + 1)}`)
   }
-  alert(zeroIDs)
+  alert(numZeroSquares)
 }
 // indexing seems to be working
-// it works !!
-// hmmm
