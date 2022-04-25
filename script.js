@@ -71,9 +71,13 @@ for (let xPos = 0; xPos < 10; xPos++) {
 }
 
 
-function minesTouching (xPos, yPos) {
-  let numMinesTouching = 0
-  
+function minesTouching (clickedPos) {
+  var xPos = clickedPos[0]
+  var yPos = clickedPos[2]
+
+  var numMinesTouching = 0
+  var zeroSquares = []
+
   var mineTouch1 = mineList.includes(`${(xPos - 1) + "." + (yPos - 1)}`); // top left corner
   if (mineTouch1) {
     numMinesTouching+=1
