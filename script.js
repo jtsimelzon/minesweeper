@@ -34,9 +34,10 @@ for (let xPos = 0; xPos < 10; xPos++) {
 
     btn.onclick = function(event) {
 
+      zerosTouching(xPos, yPos)
+
       var clickedPos = `${xPos + "." + yPos}` 
-      zerosTouching(clickedPos)
- 
+      console.log(clickedPos)
       var mineHit = mineList.includes(clickedPos);
       if (mineHit) {
         btn.style.backgroundColor = 'red'
@@ -71,8 +72,8 @@ for (let xPos = 0; xPos < 10; xPos++) {
 
 
 function minesTouching (xPos, yPos) {
- 
-
+  let numMinesTouching = 0
+  
   var mineTouch1 = mineList.includes(`${(xPos - 1) + "." + (yPos - 1)}`); // top left corner
   if (mineTouch1) {
     numMinesTouching+=1
@@ -109,10 +110,7 @@ function minesTouching (xPos, yPos) {
 }
 
 
-function zerosTouching(clickedPos) {
-  var xPos = clickedPos[0]
-  var yPos = clickedPos[2]
-
+function zerosTouching(xPos, yPos) {
   let numZeroSquares = 0
 
   if (board[xPos - 1][yPos - 1] === 0) { 
@@ -141,4 +139,5 @@ function zerosTouching(clickedPos) {
   }
   alert(numZeroSquares)
 }
+// indexing seems to be working
 // it works !!
