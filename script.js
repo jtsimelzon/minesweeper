@@ -138,6 +138,7 @@ function zerosTouching(xPos, yPos) {
     numZeroSquares+=1
   }
   alert(numZeroSquares)
+  alert(xPos + "." + yPos)
 }
 // indexing seems to be working
 // waawaaaweewa
