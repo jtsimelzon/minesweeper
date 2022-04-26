@@ -110,7 +110,7 @@ function minesTouching (xPos, yPos) {
 }
 
 
-function zerosTouching(xPos, yPos) {
+function zerosTouching(xPos, yPos, clickedPos) {
   let numZeroSquares = 0
 
   if (board[xPos - 1][yPos - 1] === 0) { 
@@ -137,5 +137,6 @@ function zerosTouching(xPos, yPos) {
   if (board[xPos + 1][yPos + 1] === 0) {
     numZeroSquares+=1
   }
-  // alert(numZeroSquares)
+  alert(clickedPos)
+  alert(numZeroSquares)
 }
