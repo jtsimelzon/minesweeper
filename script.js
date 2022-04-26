@@ -50,6 +50,7 @@ for (let yPos = 0; yPos < 10; yPos++) {
           btn.innerHTML = "";
           zerosTouching(xPos, yPos)
           // lets hope this works
+          // it does yay
         }
         if (touchedMines === 1) {
           event.target.style.color = 'blue'
@@ -140,6 +141,4 @@ function zerosTouching(xPos, yPos) {
     numZeroSquares+=1
   }
   return numZeroSquares
-  alert(xPos)
-  alert(yPos)
 }
