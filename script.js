@@ -137,6 +137,6 @@ function zerosTouching(xPos, yPos, clickedPos) {
   if (board[xPos + 1][yPos + 1] === 0) {
     numZeroSquares+=1
   }
-  alert(clickedPos)
-  alert(numZeroSquares)
+  alert(xPos)
+  alert(yPos)
 }
