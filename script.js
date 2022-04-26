@@ -34,7 +34,7 @@ for (let yPos = 0; yPos < 10; yPos++) {
 
     btn.onclick = function(event) {
 
-      zerosTouching(xPos, yPos)
+      
 
       var clickedPos = `${xPos + "." + yPos}` 
       console.log(clickedPos)
@@ -48,6 +48,8 @@ for (let yPos = 0; yPos < 10; yPos++) {
         btn.style.backgroundColor = '#D2B48C'
         if (touchedMines === 0) {
           btn.innerHTML = "";
+          zerosTouching(xPos, yPos)
+          // lets hope this works
         }
         if (touchedMines === 1) {
           event.target.style.color = 'blue'
