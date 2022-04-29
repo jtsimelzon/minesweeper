@@ -89,7 +89,7 @@ function minesTouching (xPos, yPos) {
   if (mineTouch2) {
     numMinesTouching+=1
   }
-  var mineTouch3 = mineList.includes(`${(xPos + 1) + "." + (yPos - 1)}`); // top right 
+  var mineTouch3 = mineList.includes(`${(xPos + 1)}.${(yPos - 1)}`); // top right 
   if (mineTouch3) {
     numMinesTouching+=1
   }
