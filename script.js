@@ -44,12 +44,15 @@ for (let yPos = 0; yPos < 10; yPos++) {
       } else {
         var touchedMines = minesTouching(xPos, yPos)
         console.log(touchedMines)
+
         btn.innerHTML = touchedMines;
         btn.style.backgroundColor = '#D2B48C'
+
         if (touchedMines === 0) {
           btn.innerHTML = "";
+
           var returnZeros = zerosTouching(xPos, yPos)
-          for (let i = 0, i < 100, i++) {
+          for (let i = 0; i < 100; i++) {
             if (returnZeros.includes(btn.id)) {
               btn.style.backgroundColor = '#D2B48C'
             }
