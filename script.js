@@ -34,8 +34,6 @@ for (let yPos = 0; yPos < 10; yPos++) {
 
     btn.onclick = function(event) {
 
-      
-
       var clickedPos = `${xPos + "." + yPos}` 
       console.log(clickedPos)
       var mineHit = mineList.includes(clickedPos);
@@ -50,13 +48,10 @@ for (let yPos = 0; yPos < 10; yPos++) {
 
         if (touchedMines === 0) {
           btn.innerHTML = "";
-
           var returnZeros = zerosTouching(xPos, yPos)
 
-          for (let i = 0; i < 100; i++) {
-            if (returnZeros.includes(btn.id)) {
-              btn.style.backgroundColor = '#D2B48C'
-            }
+          for (var element of returnZeros) {
+              ("button" + '${returnZeros[element]}').style.backgroundColor = '#D2B48C'
           }
         }
         if (touchedMines === 1) {
