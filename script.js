@@ -52,6 +52,7 @@ for (let yPos = 0; yPos < 10; yPos++) {
           btn.innerHTML = "";
 
           var returnZeros = zerosTouching(xPos, yPos)
+
           for (let i = 0; i < 100; i++) {
             if (returnZeros.includes(btn.id)) {
               btn.style.backgroundColor = '#D2B48C'
@@ -78,6 +79,8 @@ for (let yPos = 0; yPos < 10; yPos++) {
   }
   board.push(column)
 }
+
+// its broken
 
 
 function minesTouching (xPos, yPos) {
