@@ -48,9 +48,12 @@ for (let yPos = 0; yPos < 10; yPos++) {
         btn.style.backgroundColor = '#D2B48C'
         if (touchedMines === 0) {
           btn.innerHTML = "";
-          zerosTouching(xPos, yPos)
-          // lets hope this works
-          // it does yay
+          var returnZeros = zerosTouching(xPos, yPos)
+          for (let i = 0, i < 100, i++) {
+            if (returnZeros.includes(btn.id)) {
+              btn.style.backgroundColor = '#D2B48C'
+            }
+          }
         }
         if (touchedMines === 1) {
           event.target.style.color = 'blue'
@@ -115,30 +118,41 @@ function minesTouching (xPos, yPos) {
 
 function zerosTouching(xPos, yPos) {
   let numZeroSquares = 0
+  var zeroSquares = []
 
   if (board[xPos - 1][yPos - 1] === 0) { 
      numZeroSquares+=1
+     zeroSquares.push(`${(xPos - 1) + "." + (yPos - 1)}`)
    }
   if (board[xPos][yPos - 1] === 0) {
      numZeroSquares+=1
+     zeroSquares.push(`${(xPos) + "." + (yPos - 1)}`)
    }
   if (board[xPos + 1][yPos - 1] === 0) {
     numZeroSquares+=1
+    zeroSquares.push(`${(xPos + 1) + "." + (yPos - 1)}`)
   }
   if (board[xPos - 1][yPos] === 0) {
     numZeroSquares+=1
+    zeroSquares.push(`${(xPos - 1) + "." + (yPos)}`)
   }
   if (board[xPos + 1][yPos] === 0) {
     numZeroSquares+=1
+    zeroSquares.push(`${(xPos + 1) + "." + (yPos)}`)
   }
   if (board[xPos - 1][yPos + 1] === 0) {
     numZeroSquares+=1
+    zeroSquares.push(`${(xPos - 1) + "." + (yPos + 1)}`)
   }
   if (board[xPos][yPos + 1] === 0) {
     numZeroSquares+=1
+    zeroSquares.push(`${(xPos) + "." + (yPos + 1)}`)
+
   }
   if (board[xPos + 1][yPos + 1] === 0) {
     numZeroSquares+=1
+    zeroSquares.push(`${(xPos + 1) + "." + (yPos - 1)}`)
   }
-  return numZeroSquares
+  return zeroSquares
+  alert(zeroSquares)
 }
